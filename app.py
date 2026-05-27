@@ -61,7 +61,8 @@ if st.sidebar.button("Scarica Classifica"):
     with st.spinner(f"Scaricando classifica del {data_ok}..."):
         try:
             # Endpoint modificato per puntare alla classifica Global Excl. US
-            chart = billboard.ChartData('global-excl-us', date=str(data_ok))
+            chart = billboard.ChartData('billboard-global-excl-us', date=str(data_ok))
+
             if not chart:
                 st.error("Billboard non ha risposto.")
             else:
